@@ -6,16 +6,48 @@
 //
 
 import SwiftUI
+import Combine
 
 struct ContentView: View {
+    
+    @State private var selection: Int? = nil
+    @State private var username: String = ""
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Button(action: {
+                // Action for Adam button
+            }) {
+                Text("Adam")
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(8)
+            }
+            .padding()
+
+            Button(action: {
+                // Action for Eve button
+            }) {
+                Text("Eve")
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(8)
+            }
+            .padding()
+
+            Button(action: {
+                // Action for Profile button
+            }) {
+                Text("Profile")
+                    .padding()
+                    .background(Color.green)
+                    .foregroundColor(.white)
+                    .cornerRadius(8)
+            }
+            .padding()
         }
-        .padding()
     }
 }
 
